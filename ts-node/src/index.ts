@@ -1,15 +1,19 @@
-// import { Hero as SuperHero, Hero1, Hero2, Hero3, Hero4 } from "./classes/Hero";
-import * as HeroClasses from './classes/Hero';
-import powers from './data/powers';
+import { getPokemon } from './generics/get-pokemon';
+import { Pokemon } from './decorators/pokemon-class';
 
-const Hero = 123;
+const charmander = new Pokemon('Charmander');
+// console.log(charmander)
+// getPokemon(4)
+//   .then((resp) => {
+//     console.log(resp.sprites.front_default);
+//   })
+//   .catch(() => {
+//     console.log('error')
+//   })
+//   .finally(() => {
+//     console.log('Final')
+//   });
+console.log(charmander)
+charmander.savePokemonToDB(900);
 
-const ironman = new HeroClasses.Hero('Ironman', 3, 30);
-console.log(ironman.power);
-
-
-console.log(powers)
-
-
-
-
+// (Pokemon.prototype as any).customName = 'Custom Name';
